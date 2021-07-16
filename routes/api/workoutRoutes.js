@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
 // ROUTE TO get WORKOUT DATA IN RANGE
 router.get('/range', async (req, res) => {
     try {
-        const wrkoutData = await WorkoutDB.aggregate([
+        const workoutData = await WorkoutDB.aggregate([
             {
                 $addFields: {
                     totalDuration: {
@@ -31,8 +31,8 @@ router.get('/range', async (req, res) => {
                     }
                 }
             }
-        ]).sort({ _id: 1 }).limit(7)
-        res.status(200).json(wrkoutData)
+        ]).sort({ _id: -1 }).limit(7)
+        res.status(200).json(workoutData)
     } catch (err) {
         res.status(400).json(err)
     }
@@ -52,7 +52,19 @@ router.post('/', async ({ body }, res) => {
 })
 
 // ROUTE TO UPDATE WORKOUT
-
+router.put("/:id", async ({ params, body }, res) => {
+    try {
+        const workoutData = await WorkoutDB.findByIdAndUpdate(
+            params.id,
+            { $push: { exercises: body } },
+            { new: true }
+        )
+        res.status(200).json(workoutData);
+    }
+    catch (err) {
+        res.json(err);
+    };
+})
 
 
 
