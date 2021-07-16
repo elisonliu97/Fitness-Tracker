@@ -21,6 +21,22 @@ router.get('/', async (req, res) => {
 
 
 // ROUTE TO get WORKOUT DATA IN RANGE
+router.get('/range', async (req, res) => {
+    try {
+        const wrkoutData = await WorkoutDB.aggregate([
+            {
+                $addFields: {
+                    totalDuration: {
+                        $sum: '$exercises.duration'
+                    }
+                }
+            }
+        ]).sort({ _id: 1 }).limit(7)
+        res.status(200).json(wrkoutData)
+    } catch (err) {
+        res.status(400).json(err)
+    }
+})
 
 
 // ROUTE TO CREATE NEW WORKOUT
