@@ -1,6 +1,7 @@
 // DEPENDENCIES
 const express = require("express");
 const mongoose = require("mongoose");
+const routes = require("./routes")
 
 // PORT
 const PORT = process.env.PORT || 3000;
@@ -22,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitnessDB", {
 });
 
 // ROUTES
-app.use(require("./routes/api.js"));
+app.use(routes);
 
 // SERVER LISTENING
 app.listen(PORT, () => {
