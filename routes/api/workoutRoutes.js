@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const WorkoutDB = require("../../models/workout")
+const db = require("../../models")
 
 // ROUTE TO GET WORKOUT DATA
 router.get('/', async (req, res) => {
@@ -31,7 +32,8 @@ router.get('/range', async (req, res) => {
                     }
                 }
             }
-        ]).sort({ _id: -1 }).limit(7)
+        ]).sort({ _id : -1}).limit(7)
+        workoutData.reverse()
         res.status(200).json(workoutData)
     } catch (err) {
         res.status(400).json(err)

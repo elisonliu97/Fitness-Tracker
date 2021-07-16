@@ -30,8 +30,6 @@ async function initExercise() {
 
 }
 
-initExercise();
-
 function handleWorkoutTypeChange(event) {
   workoutType = event.target.value;
 
@@ -98,6 +96,7 @@ function validateInputs() {
 async function handleFormSubmit(event) {
   event.preventDefault();
 
+  initExercise();
   let workoutData = {};
 
   if (workoutType === "cardio") {
@@ -117,6 +116,7 @@ async function handleFormSubmit(event) {
   await API.addExercise(workoutData);
   clearInputs();
   toast.classList.add("success");
+
 }
 
 function handleToastAnimationEnd() {

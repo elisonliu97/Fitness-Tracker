@@ -18,8 +18,8 @@ app.use(express.static("public"));
 
 // MONGODB CONNECTION
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitnessDB", {
-  useNewUrlParser: true,
-  useFindAndModify: false
+    useNewUrlParser: true,
+    useFindAndModify: false
 });
 
 // ROUTES
@@ -27,5 +27,5 @@ app.use(routes);
 
 // SERVER LISTENING
 app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+    console.log(`App running on port ${PORT}!`);
 });
