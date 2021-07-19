@@ -1,7 +1,5 @@
 # Fitness-Tracker-HW
 
-https://fitness-tracker-hw-el.herokuapp.com/?id=60f228b8e45c12001563fbfb
-
   ## Description
   This is a web application to help keep track of a user's fitness workouts. The homepage shows information based on the user's latest workout, and allows for users to either update their latest workout, or create a new workout. Users can choose from resistance workouts or cardio workouts. When the user chooses an exercise type, fields regarding that exercise type will show up. After the user fills out those fields, they can choose to either finish adding to their workout, or add more to the workout. When the user is finished adding to their workout, they are sent back to the homepage, where it will have their updated newest workout information. There is also a second page that the user can get to by clicking the dashboard button on the nav bar. This page shows graphs about the user's last few workouts, such as duration, and weight of the workout. Note: if the workout is a cardio workout, it will show 0 in weight as there is no weight option in the cardio workout.
 
@@ -28,6 +26,9 @@ https://fitness-tracker-hw-el.herokuapp.com/?id=60f228b8e45c12001563fbfb
   The stats page will give you graphs and show you information based on your last few workouts.
   - [Deployed Application](https://fitness-tracker-hw-el.herokuapp.com/)
   - [Video Demo](https://drive.google.com/file/d/1XXkHxxZEzC1XMfN6asFeo2M1p6geHYWl/view)
+  ![image](https://user-images.githubusercontent.com/28275237/126218466-679b70ad-6962-49d9-8104-0da6bdd359e6.png)
+  ![image](https://user-images.githubusercontent.com/28275237/126218517-3d5ab2cd-917c-46bb-a618-e3e7f56740ce.png)
+
 
 
   ## License
