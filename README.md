@@ -5,10 +5,18 @@
 
 
   ## Table of Contents
+  - [Tools and Technologies](#tools-and-technologies)
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
   - [Contact me](#questions)
+
+  ## Tools and Technologies
+  - HTML/CSS
+  - Javascript
+  - ExpressJS
+  - MongoDB
+  - Mongoose
 
   ## Installation
   To run this application locally, clone this repository and install the dependencies using
